@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bintense</title>
+  <style>
+    :root {
+      --page-bg: #0d101f;
+      --text-primary: #ffffff;
+      --text-secondary: #989cac;
+      --link-color: #62b2ff;
+      --desktop-bg: url("./back_img.png");
+      --mobile-bg: url("./back_mob.png");
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-color: var(--page-bg);
+      background-image: var(--desktop-bg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: var(--text-primary);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 100px;
+    }
+
+    .content {
+      max-width: 573px;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 573px;
+      font-size: 80px;
+      font-weight: 600;
+      line-height: 0.97;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+      animation: fade-up 0.9s ease-out both;
+    }
+
+    .copy {
+      margin-top: clamp(150px, 22vh, 190px);
+      max-width: 560px;
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.12;
+      animation: fade-up 0.9s ease-out 0.18s both;
+    }
+
+    .copy p {
+      margin: 0 0 22px;
+    }
+
+    .copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: var(--link-color);
+    }
+
+    @keyframes fade-up {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      h1,
+      .copy {
+        animation: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background-image: var(--mobile-bg);
+        background-position: center top;
+      }
+
+      .page {
+        padding: 32px 16px 48px;
+      }
+
+      .content {
+        max-width: none;
+      }
+
+      h1 {
+        max-width: 100%;
+        font-size: 48px;
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+      }
+
+      .copy {
+        margin-top: 48px;
+        max-width: 100%;
+        line-height: 1.14;
+      }
+
+      .copy p {
+        margin-bottom: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="content" aria-labelledby="page-title">
+      <h1 id="page-title">Thank You for Being With Us</h1>
+
+      <div class="copy">
+        <p>We are no longer accepting new orders and are in the process of closing our exchange.</p>
+        <p>We sincerely thank all of our clients for your trust and support.</p>
+        <p>If you need access to your account information, historical data, or any assistance, please contact us at: <a
+            href="mailto:support@bintense.uk">support@bintense.uk</a>. Kindly include details to help us identify your account.
+</p>
+        <p>We will make reasonable efforts to respond in accordance with our data retention policies and applicable regulations.</p>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
